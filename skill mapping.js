@@ -93,8 +93,8 @@ const SkillMapping = () => {
     resetForm();
   };
 
-  const handleDeleteSkill = (id) => {
-    setSkills(skills.filter(skill => skill.id !== id));
+  const handleDeleteSkill = (employeeName) => {
+    setSkills(skills.filter(skill => skill.id !== employeeName));
   };
 
   const handleSaveSkills = () => {
@@ -245,7 +245,7 @@ const SkillMapping = () => {
             <button onClick={() => handleEditSkill(skill.employeeName)}>Edit</button>
             <br />
             <br />
-            <button onClick={() => handleDeleteSkill(skill.id)}>Delete</button>
+            <button onClick={() => handleDeleteSkill(skill.employeeName)}>Delete</button>
           </li>
         ))}
       </ul>
